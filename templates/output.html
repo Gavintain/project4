@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Other Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("/static/prediction.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main-section {
+            height: 80vh;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        .bottom-section {
+            height: 20vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            user-select: none;
+        }
+        .custom-button {
+            background-color: #FFC107;
+            color: #ffffff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .custom-button:hover {
+            background-color: #FFA000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="\">Main</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index">Predict Championship standing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/other_page">What is Rally</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="bottom-section">
+        <h1>Probability of a driver finishing in the top 3 is...</h1>
+        <p>{{ prediction }} Percent !!</p>
+    </div>
+</body>
+</html>
